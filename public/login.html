@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.login-logo{
+    position: relative;
+    margin-left: -41.5%;
+}
+.login-logo img{
+    position: absolute;
+    width: 20%;
+    margin-top: 19%;
+    background: #282726;
+    border-radius: 2.5rem;
+    padding: 5%;
+}
+.login-form-1{
+    padding: 9%;
+    background:#282726;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    margin-bottom:12%;
+    color:#fff;
+}
+.login-form-2{
+    padding: 9%;
+    background: #f05837;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+    text-align: center;
+    margin-bottom:12%;
+    color: #fff;
+}
+.btnSubmit{
+    font-weight: 600;
+    width: 50%;
+    color: #282726;
+    background-color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    padding:2%;
+}
+</style>
+</head>
+<body style="background-color:hsl(0, 0%, 47%);">
+<div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                    <h3>Student Login</h3>
+                    <form action="/SLogin" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Roll Number" name="roll" required="required" title="This field is required."/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Parents number"  name="pno" required="required" title="This field is required." />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password"  name="passw" required="required" title="This field is required." />
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Login" />
+                        </div>
+                       </form>                    
+                </div>
+                <div class="col-md-6 login-form-2">
+                    <div class="login-logo">
+                        <img src="https://pngimage.net/wp-content/uploads/2018/05/email-white-png-3.png" alt=""/>
+                    </div>
+                    <h3>Management Login</h3>
+                    <form action="/MLogin" method="POST">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Username" name="email" required="required" title="This field is required." />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password" name="pass" required="required" title="This field is required." />
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" name="select_path" id="select_path">>
+                                <option value = "Admin" name = "Admin">Admin</option>
+                                <option value = "Incharge" name = "Incharge">Incharge</option></select>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Login" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body></html>

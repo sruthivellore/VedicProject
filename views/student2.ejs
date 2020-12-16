@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Admin page</title>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="bootstrap.css" rel="stylesheet" media="screen">
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+td a + a {
+   padding-left: 1em;
+} 
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}*/
+
+
+img {
+   border-radius:10px;
+}
+jumbotron {
+    padding: 0.5em 0.6em;
+}
+a{
+color: #1d1a1a;
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Permission Assistant</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+       
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+    </ul>
+     
+      <!-- <input class="form-control mr-sm-2" placeholder="" type="text">-->
+     <form action="Logout" method="post">
+        <button type="submit" class="btn btn-dark"><i class="fa fa-sign-out" aria-hidden="true" style="font-size: 1.5em"></i>&nbsp;SIGN OUT</button>
+    </form>
+    
+  </div>
+</nav>
+<div class="container-fluid">
+<div class="row">
+<div class="card border-dark mb-3" style="max-width: 15rem;">
+  <div class="card-header" style="background-color:white"><center><img src = https://www.centurioneurope.co.uk/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/4/7/47abce59-9724-49b9-9453-ad0720d12bdc_1.jpg height="50" width="50" align><br>
+  STUDENT</center></div>
+  <div class="card-body">
+    <ul class="nav nav-pills" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" style="background-color:orange" data-toggle="tab" href="#dash"><i class = "fa fa-dashboard"></i>&nbsp;Dashboard</a>
+  </li>
+
+
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#pro"><i class = "fa fa-user"></i>&nbsp;Profile</a>
+  </li>
+<li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#appli"><i class = "fa fa-th"></i>&nbsp;Application Form</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#history"><i class = "fa fa-calendar"></i>&nbsp;Application History</a>
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </li>
+ 
+  
+  </ul>
+</div>
+</div>
+<div class = "col-md-9">
+ <div class="tab-content" id="myTabContent">
+   <div class="tab-pane active" id="dash" >
+   <div class="jumbotron">
+   <div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Submitted Applications</h6>
+        <center><p class = "text-primary lead"> </p></center>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+     <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Permits Left</h6>
+        <center><p class = "text-primary lead"> </p></center>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Pending Applications</h6>
+       <center> <p class = "text-primary lead"> </p></center>
+      </div>
+    </div>
+  </div>
+  
+</div>
+  <hr class="my-6">
+  <h4 style="color:orange"><strong >PENDING APPLICATIONS</strong></h4>
+  <table >
+  <tr class ="table-active">
+  <th>P ID </th>
+  <th>Roll Number</th>
+
+<th>Date</th>
+<th>Description</th>
+<th>IStatus</th>
+<th>AStatus</th>
+
+
+</tr>
+<!--    <tr> <c:forEach items="" var=""><tr>
+     <c:forEach items="" var="">
+      
+        <td><p><small></small></p></td>
+        
+      </c:forEach><td>
+      <form action = "Accept" method="post">
+        <input type = "hidden" name = "application" value = ""/>
+      <button type="submit" id="btnSubmit" class="btn btn-success">Accept</button> </form>
+      <form action = "Reject" method="post">
+        <input type = "hidden" name = "application" value = ""/>
+      <button type="submit" id="btnCancel" class="btn btn-primary">Decline</button></form>
+      
+      </td></tr>
+    </c:forEach></tr> -->
+  </table>
+</div>
+
+  </div>
+   <div class="tab-pane" id="pro" >
+   <div class="card style="width: 50rem; margin-top:20px;">
+  <div class="card-body">
+    <h4 class="card-title text-warning"><strong>MY PROFILE</strong></h4><br><centre>
+    <div class="list-group">
+    <h6 class="list-group-item"><strong>
+    Roll Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>
+    <h6 class="list-group-item"><strong>
+    Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+   </h6>
+   <h6 class="list-group-item"><strong>
+    Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+  </h6>
+  <h6 class="list-group-item"><strong>
+    Parent Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+  </h6>
+    <h6 class="list-group-item"><strong>
+    Phone Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+  </h6>
+   <h6 class="list-group-item"><strong>
+    Student Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+  </h6>
+   <h6 class="list-group-item"><strong>
+   Class ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;&nbsp;
+  </h6>
+   <h6 class="list-group-item"><strong>
+    Branch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;&nbsp;
+  </h6>
+   <h6 class="list-group-item"><strong>
+    Year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+  </h6>
+ 
+</div></centre>
+  </div>
+</div>
+   </div>
+   <div class="tab-pane" id="history" >
+        <div class="card" style=" width: 54rem;">
+  <div class="card-body">
+    <h4 class="card-title text-warning"><b>Application History</b></h4><br><br>
+    
+<table>
+  <tr class ="table-active">
+  <th>P ID </th>
+  <th>Roll Number</th>
+<th>Year</th>
+<th>Section</th>
+<th>Date</th>
+<th>Description</th>
+<th>Status</th>
+
+</tr>
+<!--  <tr>   <c:forEach items="" var=""><tr>
+     <c:forEach items="" var="">
+      
+        <td><p><small></small></p></td>
+        
+      </c:forEach><td>
+      <form action = "Accept" method="post">
+        <input type = "hidden" name = "application" value = ""/>
+      <button type="submit" id="btnSubmit" class="btn btn-success">Accept</button> </form>
+      <form action = "Reject" method="post">
+        <input type = "hidden" name = "application" value = ""/>
+      <button type="submit" id="btnCancel" class="btn btn-primary">Decline</button></form>
+      
+      </td></tr>
+    </c:forEach></tr> -->
+  </table>
+    
+
+  </div>
+</div>
+   </div>
+   <div class="tab-pane" id="appli" >
+  <div class="jumbotron" style="height:750px;width:950px;margin-left:60px;">
+
+  <div class="card border-dar mb-3" style="max-width: 50rem;max-height: 50rem;margin-left: 40px;">
+  
+  <div class="card-body">
+    <h4 class="card-title text-warning"><center><b>Application Form</b></center></h4>
+    <form method ="post" action="/happlicationform">
+     <div class="form-group">
+                            <label for="reasonh" class="col-sm-2 col-form-label">Reason</label>
+                            <input type="text" class="form-control" placeholder="Reason" name="reason" />
+                            <small id="reasonHelp" class="form-text text-muted">Limit 2-3 words.</small>
+
+                        </div>
+                        <div class="form-group">
+                          <label for="date" class="col-sm-2 col-form-label">Date</label>
+                            <input type="date" class="form-control" placeholder=" date" name="date" />
+                        </div>
+                        <div class="form-group">
+                          <label for="hdays" class="col-sm-2 col-form-label">Number Of Days</label>
+                            <input type="text" class="form-control" placeholder=" days" name="hdays" />
+
+                        </div>
+                        <div class="form-group">
+                          <label for="hours" class="col-sm-2 col-form-label">Number Of hours</label>
+                            <input type="text" class="form-control" placeholder="hours" name=hhours" />
+                        </div>
+ 
+                       
+    
+  </div>
+  <p class="lead" ><center>
+    <a class="btn btn-warning " style="border-radius:850px;" href="#" role="button">Request</a></center>
+  </p>
+
+ 
+</div>
+</div>
+</div>
+</div>
+
+   </div>
+   </div>
+
+ 
+</body>
+</html>
