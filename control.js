@@ -18,9 +18,8 @@ var session = require('express-session')
 app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000000 }}))
 
 var mongojs = require('mongojs') 
-var db = mongojs('mongodb://sruthi:s12345@ds151814.mlab.com:51814/permission_assistant',['students','incharge','applications','classes'])
-// var db1 = mongojs('mongodb://sruthi:s12345@ds151814.mlab.com:51814/permission_assistant',['students'])
-// var db2 = mongojs('mongodb://sruthi:s12345@ds151814.mlab.com:51814/permission_assistant',['applications'])
+var db = mongojs('mongodb://xxxxx:xxxxxx@xxxxxx.mlab.com:xxxxx/permission_assistant',['students','incharge','applications','classes'])
+
 
 app.get('/', function(req,res){
 	res.sendFile(__dirname+'/public/login.html')
@@ -34,8 +33,8 @@ app.get('/admin', function(req,res){
 	
 	if(req.session.FirstTime){
 		var doc = {
-		fname: " Sruthi",
-		lname:"Vellore",
+		fname: "xxxxx",
+		lname:"xxxxx",
 		email: "admin@gmail.com",
 		pass: "12345",
 		no:"1234567890"
